@@ -1,0 +1,213 @@
+﻿
+/*JUMBOTRON*/
+
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+}
+
+.jumbotron .container {
+    position: relative;
+    z-index: 2;
+    background: rgba(0,0,0,0);
+    padding: 2rem;
+        
+    border-radius: 3px;
+}
+
+.jumbotron-background {
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+/*<--/JUMBOTRON*/
+
+
+/*NAVBAR*/
+
+.nav-item .nav-link{
+    color:white;
+    text-decoration: none;
+    font-size:18px;
+    opacity:unset;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+.navbar{
+    min-height:80px;
+}
+
+.nav-item::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: rgb(225, 15, 40);
+    transition: 0.2s;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.navbar-nav > li {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/*<--/NAVBAR*/
+
+
+/*DEPARTAMENTS CARDS*/
+#card1 {
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+    color: white;
+}
+#card2 {
+    background-color: rgb(225, 15, 40);
+    text-align: center;
+    color: white;
+}
+#card3 {
+    background-color: rgb(209, 11, 34);
+    text-align: center;
+    color: white;
+}
+#card4 {
+    background-color: rgb(186, 11, 28);
+    color:white;
+    text-align: center;
+}
+#card5 {
+    background-color: rgb(40, 40, 40);
+    text-align: center;
+    color: white;
+}
+/*<--/DEPARTAMENTS CARDS*/
+
+
+/*FOUNDERS CARDS*/
+
+.profile-card-1 {
+    margin-top: 20px;
+}
+
+.profile-card-1 .btn {
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 7px 20px;
+}
+
+.profile-card-1 .card-img-block {
+    width: 91%;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+}
+
+.profile-card-1 .card-img-block img {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.63);
+}
+
+.profile-card-1 h5 {
+    color: black;
+    font-weight: 600;
+}
+
+.profile-card-1 p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.profile-card-1 .btn-primary {
+    background-color: #4E5E30;
+    border-color: #4E5E30;
+}
+/*<--/FOUNDERS CARDS*/
+
+
+/*FOOTER*/
+footer {
+    background-color: rgb(52, 58, 64);
+    width: 100%;
+    bottom: 0;
+    font-weight: lighter;
+    color: white;
+}
+
+.footerHeader {
+    width: 100%;
+    padding: 1em;
+    background-color: rgb(52, 58, 64);
+    text-align: center;
+    color: white;
+}
+
+footer h3 {
+    font-weight: lighter;
+}
+
+footer ul {
+    padding-left: 5px;
+    list-style: none;
+}
+
+footer p {
+    text-align: justify;
+    font-size: 12px;
+}
+
+footer iframe {
+    width: 100%;
+    position: relative;
+    height: 170px;
+}
+
+.sm {
+    list-style: none;
+    overflow: auto;
+}
+
+.sm li {
+    display: inline;
+    padding: 5px;
+    float: left;
+}
+
+.sm li a img {
+    width: 32px;
+}
+
+.footerEnd {
+    width: 100%;
+    padding: 1em;
+    background-color: rgb(31, 31, 31);
+    text-align: center;
+    color: white;
+}
+
+a.item1{
+    text-decoration:none;
+    color:white;
+}
+
+a.item1:hover{
+    text-decoration:none;
+    color:white;
+}
+
+.footer-links{
+    line-height:28px;
+    font-size:20px;
+}
+
+/*<--/FOOTER*/
