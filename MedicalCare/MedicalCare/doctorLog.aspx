@@ -69,16 +69,18 @@
 					
 			</h2>
 				</b>
-                <br /><br />
+                <br />
+			
+            <br />
 			
             <br />
            
                        
             <div class="container" style="margin-right:-120px;" >
-			<asp:TextBox ID="TextBox1" runat="server" Placeholder=" Search...." Width="400px" BorderColor="blue" BorderStyle="Outset" style="border-top: none; border-left:none; border-right:none; border-bottom-left-radius:5px; border-bottom-right-radius:5px"></asp:TextBox>
+			<asp:TextBox ID="TextBox1" runat="server" Placeholder=" Search...." Width="400px" BorderColor="blue" BorderStyle="Outset" style="border-top: none; border-left:none; border-right:none; border-bottom-left-radius:5px; border-bottom-right-radius:5px" ></asp:TextBox>
 &nbsp;&nbsp;
                 
-                <asp:Button ID="Button1" runat="server" Text="Search" CssClass="btn btn-outline-info" style="border-radius:50%" >
+                <asp:Button ID="Button1" runat="server" Text="Search" CssClass="btn btn-outline-info" style="border-radius:50%" OnClick="Button1_Click" >
                     
                 </asp:Button>
                    </div>

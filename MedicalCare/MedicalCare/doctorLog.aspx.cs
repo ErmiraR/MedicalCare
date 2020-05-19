@@ -12,7 +12,7 @@ namespace MedicalCare
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			Label1.Text = Session["Name"].ToString();
-			//Label2.Text = Session["ID"].ToString();
+			
 			if (!this.IsPostBack)
 			{
                 this.BindGrid();
@@ -31,12 +31,7 @@ namespace MedicalCare
 
         }
 
-        //protected void Insert(object sender, EventArgs e)
-        //{
-        //    Class3 c1 = new Class3();
-        //    c1.Inset(txtName.Text, txtSurname.Text, txtEmail.Text, txtTel.Text, txtDepartament.Text, );
-        //    this.BindGrid();
-        //}
+      
         protected void OnRowEditing(object sender, GridViewEditEventArgs e)
         {
             GridView1.EditIndex = e.NewEditIndex;
@@ -80,10 +75,9 @@ namespace MedicalCare
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
-            //Pacient c1 = new Pacient();
-            //GridView1.DataSource = c1.search(TextBox1.Text);
-            //GridView1.DataBind();
+            Pacient c1 = new Pacient();
+            GridView1.DataSource = c1.search(TextBox1.Text);
+            GridView1.DataBind();
         }
     }
 	
