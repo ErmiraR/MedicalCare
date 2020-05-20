@@ -11,7 +11,7 @@ namespace MedicalCare
 {
 
 
-	public partial class admini
+	public partial class DoctorAdmin
 	{
 	}
 }

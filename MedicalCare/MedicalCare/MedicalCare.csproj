@@ -70,6 +70,7 @@
     <Content Include="4.jpg" />
     <Content Include="about.aspx" />
     <Content Include="admin.aspx" />
+    <Content Include="AdminDepartament.aspx" />
     <Content Include="bootstrap-4.3.1-dist\css\bootstrap-grid.css" />
     <Content Include="bootstrap-4.3.1-dist\css\bootstrap-grid.min.css" />
     <Content Include="bootstrap-4.3.1-dist\css\bootstrap-reboot.css" />
@@ -83,6 +84,7 @@
     <Content Include="chat.JPG" />
     <Content Include="css\main.css" />
     <Content Include="css\util.css" />
+    <Content Include="DoctorAdmin.aspx" />
     <Content Include="doctorLog.aspx" />
     <Content Include="doctors.aspx" />
     <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.css" />
@@ -156,6 +158,12 @@
     <Content Include="vendor\select2\select2.js" />
     <Content Include="vendor\select2\select2.min.css" />
     <Content Include="vendor\select2\select2.min.js" />
+    <Content Include="Web References\Referenc\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\Referenc\WebService1.disco" />
+    <Content Include="WebService1.asmx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -177,7 +185,21 @@
     <Compile Include="admin.aspx.designer.cs">
       <DependentUpon>admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminDepartament.aspx.cs">
+      <DependentUpon>AdminDepartament.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDepartament.aspx.designer.cs">
+      <DependentUpon>AdminDepartament.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="DoctorAdmin.aspx.cs">
+      <DependentUpon>DoctorAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoctorAdmin.aspx.designer.cs">
+      <DependentUpon>DoctorAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="doctorLog.aspx.cs">
       <DependentUpon>doctorLog.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -215,12 +237,29 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Search.cs" />
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Referenc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -309,6 +348,8 @@
     <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
     <Content Include="vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Site2.Master" />
+    <None Include="Web References\Referenc\WebService1.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -318,6 +359,22 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://localhost:44344/WebService1.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Referenc\</RelPath>
+      <UpdateFromURL>https://localhost:44344/WebService1.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MedicalCare_Referenc_WebService1</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

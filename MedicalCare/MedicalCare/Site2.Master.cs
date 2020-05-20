@@ -7,11 +7,17 @@ using System.Web.UI.WebControls;
 
 namespace MedicalCare
 {
-	public partial class admini : System.Web.UI.Page
+	public partial class Site2 : System.Web.UI.MasterPage
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
 
+		}
+
+		protected void LinkButton1_Click(object sender, EventArgs e)
+		{
+			Logo log = new Logo();
+			log.Logout();
 		}
 	}
 }

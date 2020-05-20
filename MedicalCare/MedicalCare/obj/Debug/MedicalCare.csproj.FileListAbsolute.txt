@@ -295,7 +295,6 @@ C:\Users\Puhiza\Desktop\Puhiza Medicare\MedicalCare\MedicalCare\bin\MedicalCare.
 C:\Users\Puhiza\Desktop\Puhiza Medicare\MedicalCare\MedicalCare\bin\MedicalCare.pdb
 C:\Users\Puhiza\Desktop\Puhiza Medicare\MedicalCare\MedicalCare\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Puhiza\Desktop\Puhiza Medicare\MedicalCare\MedicalCare\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Puhiza\Desktop\Puhiza Medicare\MedicalCare\MedicalCare\obj\Debug\MedicalCare.csprojAssemblyReference.cache
 C:\Users\Puhiza\Desktop\Puhiza Medicare\MedicalCare\MedicalCare\obj\Debug\MedicalCare.csproj.CopyComplete
 C:\Users\Puhiza\Desktop\Puhiza Medicare\MedicalCare\MedicalCare\obj\Debug\MedicalCare.dll
 C:\Users\Puhiza\Desktop\Puhiza Medicare\MedicalCare\MedicalCare\obj\Debug\MedicalCare.pdb

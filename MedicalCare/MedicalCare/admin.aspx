@@ -1,68 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin.aspx.cs" Inherits="MedicalCare.admin" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Administrator Dashboard</title>
-     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: whitesmoke">
- &nbsp;&nbsp;&nbsp;
-      <image src="images/logon.jpeg" alt="" height="50px" width="150px" />
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-            &nbsp;&nbsp;&nbsp;
-                 <ul class="navbar-nav" >
-      <li class="nav-item ">
-        <a class="nav-link" href="WebForm3.aspx" >Dashboard </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="WebForm4.aspx" >Doctor</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="WebForm5.aspx" >Departament</a>
-      </li>
-    
-    </ul>
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      
-    <form class="form-inline my-2 my-lg-0" >
-      	 
- <asp:LinkButton ID="LinkButton1" runat="server"  OnClick="LinkButton1_Click"  >
-     
-     <i  class="fa fa-sign-out fa-2x"></i>
- </asp:LinkButton>
-			 
-
-	
-     
-    </form>
-  </div>
-</nav>
-        <br />
-
-           <div class="container">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="admin.aspx.cs" Inherits="MedicalCare.admini" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <br />
+	<div class="container">
  
                   <div class="analytics-sparkle-area">
             <div class="container-fluid">
@@ -233,9 +174,7 @@
 
 
   </div>
-                
-                
-                <div class="container my-5">
+        <div class="container my-5">
 
   
   <!-- Section: Block Content -->
@@ -314,105 +253,5 @@
   
 
 </div>
-
-            </div>
-       <br />
-        
-            <footer style="background-color: whitesmoke">
-                <br />
-             
-                <div class="container" >
-                    <div class="row">
-                        <div class="col-md-4">
-                            <a href="home.aspx">
-                                <img src="images/logo.png" alt="footerLogo" width="130" /></a>
-                            <div >
-                                <br />
-                                <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                           
-                            </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <h3>Our Location </h3>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23718.057031266126!2d21.381615253083012!3d42.00548761956775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1354146ed2aaff4b%3A0xdd79f5654c79d7e7!2sKarposh%2C%20Skopje%201000!5e0!3m2!1sen!2smk!4v1589212199395!5m2!1sen!2smk" sytle="" frameborder="0" style="border: 0" allowfullscreen=""></iframe>
-                        </div>
-                        <div class="col-md-4">
-                            <h3>Contact Us</h3>
-                            <ul>
-                                <li>Phone : 123 - 456 - 789</li>
-                                <li>E-mail : info@medicare.com</li>
-                                <li>Fax : 123 - 456 - 789</li>
-                            </ul>
-                           
-                            
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="footerEnd" style="text-align:center">© 2020 Copyright: MediCare</div>
-            </footer>
-        
-    <!-- jquery
-		============================================ -->
-    <script src="admin/js/vendor/jquery-1.12.4.min.js"></script>
-    <!-- bootstrap JS
-		============================================ -->
-    <script src="admin/js/bootstrap.min.js"></script>
-    <!-- wow JS
-		============================================ -->
-    <script src="admin/js/wow.min.js"></script>
-    <!-- price-slider JS
-		============================================ -->
-    <script src="admin/js/jquery-price-slider.js"></script>
-    <!-- meanmenu JS
-		============================================ -->
-    <script src="admin/js/jquery.meanmenu.js"></script>
-    <!-- owl.carousel JS
-		============================================ -->
-    <script src="admin/js/owl.carousel.min.js"></script>
-    <!-- sticky JS
-		============================================ -->
-    <script src="admin/js/jquery.sticky.js"></script>
-    <!-- scrollUp JS
-		============================================ -->
-    <script src="admin/js/jquery.scrollUp.min.js"></script>
-    <!-- counterup JS
-		============================================ -->
-    <script src="admin/js/counterup/jquery.counterup.min.js"></script>
-    <script src="admin/js/counterup/waypoints.min.js"></script>
-    <script src="admin/js/counterup/counterup-active.js"></script>
-    <!-- mCustomScrollbar JS
-		============================================ -->
-    <script src="admin/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="admin/js/scrollbar/mCustomScrollbar-active.js"></script>
-    <!-- metisMenu JS
-		============================================ -->
-    <script src="admin/js/metisMenu/metisMenu.min.js"></script>
-    <script src="admin/js/metisMenu/metisMenu-active.js"></script>
-    <!-- morrisjs JS
-		============================================ -->
-    <script src="admin/js/morrisjs/raphael-min.js"></script>
-    <script src="admin/js/morrisjs/morris.js"></script>
-    <script src="admin/js/morrisjs/home3-active.js"></script>
-    <!-- morrisjs JS
-		============================================ -->
-    <script src="admin/js/sparkline/jquery.sparkline.min.js"></script>
-    <script src="admin/js/sparkline/jquery.charts-sparkline.js"></script>
-    <script src="admin/js/sparkline/sparkline-active.js"></script>
-    <!-- calendar JS
-		============================================ -->
-    <script src="admin/js/calendar/moment.min.js"></script>
-    <script src="admin/js/calendar/fullcalendar.min.js"></script>
-    <script src="admin/js/calendar/fullcalendar-active.js"></script>
-    <!-- plugins JS
-		============================================ -->
-    <script src="admin/js/plugins.js"></script>
-    <!-- main JS
-		============================================ -->
-    <script src="admin/js/main.js"></script>
-        <script src="java.js"></script>
-    </form>
-</body>
-</html>
+    <br />
+</asp:Content>
