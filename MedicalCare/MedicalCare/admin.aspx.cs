@@ -13,5 +13,11 @@ namespace MedicalCare
 		{
 
 		}
+
+		protected void LinkButton1_Click(object sender, EventArgs e)
+		{
+			Logo log = new Logo();
+			log.Logout();
+		}
 	}
 }

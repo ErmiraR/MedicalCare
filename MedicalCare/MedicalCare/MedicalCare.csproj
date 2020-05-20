@@ -80,6 +80,7 @@
     <Content Include="bootstrap-4.3.1-dist\js\bootstrap.bundle.min.js" />
     <Content Include="bootstrap-4.3.1-dist\js\bootstrap.js" />
     <Content Include="bootstrap-4.3.1-dist\js\bootstrap.min.js" />
+    <Content Include="chat.JPG" />
     <Content Include="css\main.css" />
     <Content Include="css\util.css" />
     <Content Include="doctorLog.aspx" />

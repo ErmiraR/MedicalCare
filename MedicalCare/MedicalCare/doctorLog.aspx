@@ -18,7 +18,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #4db8ff;">
+             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: whitesmoke">
  &nbsp;&nbsp;&nbsp;
       <image src="images/logon.jpeg" alt="" height="50px" width="150px" />
 
@@ -43,9 +43,12 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-2 my-lg-0" >
       	 
- <asp:LinkButton ID="LinkButton1" runat="server" style="color:white" OnClick="LinkButton1_Click"  >LOGOUT</asp:LinkButton>
+ <asp:LinkButton ID="LinkButton1" runat="server"   OnClick="LinkButton1_Click"  >
+     
+     <i  class="fa fa-sign-out fa-2x"></i>
+ </asp:LinkButton>
 			 
 
 	
