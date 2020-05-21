@@ -32,5 +32,15 @@ namespace MedicalCare.Properties {
                 return ((string)(this["MedicalCare_Referenc_WebService1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://localhost:44344/WebService2.asmx")]
+        public string MedicalCare_Refrence_WebService2 {
+            get {
+                return ((string)(this["MedicalCare_Refrence_WebService2"]));
+            }
+        }
     }
 }

@@ -347,3 +347,4 @@ C:\Users\Puhiza\Desktop\Puhiza Medicare\MedicalCare\MedicalCare\bin\roslyn\vbc.e
 C:\Users\Puhiza\Desktop\Puhiza Medicare\MedicalCare\MedicalCare\bin\roslyn\vbc.rsp
 C:\Users\Puhiza\Desktop\Puhiza Medicare\MedicalCare\MedicalCare\bin\roslyn\VBCSCompiler.exe
 C:\Users\Puhiza\Desktop\Puhiza Medicare\MedicalCare\MedicalCare\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Puhiza\Desktop\Puhiza Medicare\MedicalCare\MedicalCare\obj\Debug\MedicalCare.csprojAssemblyReference.cache
