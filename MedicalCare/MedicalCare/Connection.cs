@@ -12,7 +12,7 @@ namespace spitali
     {
         public SqlConnection konekcioni()
         {
-            SqlConnection con = new SqlConnection("Data Source=SEMINA-PC\\SQLEXPRESS;Initial Catalog=spitali;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=desktop-0os3ple;Initial Catalog=spitali;Integrated Security=True");
             con.Open();
             return con;
             

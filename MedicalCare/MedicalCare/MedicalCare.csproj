@@ -71,6 +71,7 @@
     <Content Include="about.aspx" />
     <Content Include="admin.aspx" />
     <Content Include="AdminDepartament.aspx" />
+    <Content Include="Appointment.aspx" />
     <Content Include="bootstrap-4.3.1-dist\css\bootstrap-grid.css" />
     <Content Include="bootstrap-4.3.1-dist\css\bootstrap-grid.min.css" />
     <Content Include="bootstrap-4.3.1-dist\css\bootstrap-reboot.css" />
@@ -223,6 +224,13 @@
     </Compile>
     <Compile Include="AdminDepartament.aspx.designer.cs">
       <DependentUpon>AdminDepartament.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment.aspx.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Appointment.aspx.designer.cs">
+      <DependentUpon>Appointment.aspx</DependentUpon>
     </Compile>
     <Compile Include="cardioDep.aspx.cs">
       <DependentUpon>cardioDep.aspx</DependentUpon>

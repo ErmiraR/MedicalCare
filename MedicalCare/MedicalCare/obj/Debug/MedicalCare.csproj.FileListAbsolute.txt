@@ -407,3 +407,13 @@ C:\Users\User3318\Desktop\medicare\MedicalCare\MedicalCare\obj\Debug\MedicalCare
 C:\Users\User3318\Desktop\medicare\MedicalCare\MedicalCare\obj\Debug\MedicalCare.csproj.CopyComplete
 C:\Users\User3318\Desktop\medicare\MedicalCare\MedicalCare\obj\Debug\MedicalCare.dll
 C:\Users\User3318\Desktop\medicare\MedicalCare\MedicalCare\obj\Debug\MedicalCare.pdb
+C:\Users\Ermira\Desktop\Medical\MedicalCare\MedicalCare\bin\MedicalCare.dll.config
+C:\Users\Ermira\Desktop\Medical\MedicalCare\MedicalCare\bin\MedicalCare.dll
+C:\Users\Ermira\Desktop\Medical\MedicalCare\MedicalCare\bin\MedicalCare.pdb
+C:\Users\Ermira\Desktop\Medical\MedicalCare\MedicalCare\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Ermira\Desktop\Medical\MedicalCare\MedicalCare\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Ermira\Desktop\Medical\MedicalCare\MedicalCare\obj\Debug\MedicalCare.csprojAssemblyReference.cache
+C:\Users\Ermira\Desktop\Medical\MedicalCare\MedicalCare\obj\Debug\MedicalCare.csproj.CoreCompileInputs.cache
+C:\Users\Ermira\Desktop\Medical\MedicalCare\MedicalCare\obj\Debug\MedicalCare.csproj.CopyComplete
+C:\Users\Ermira\Desktop\Medical\MedicalCare\MedicalCare\obj\Debug\MedicalCare.dll
+C:\Users\Ermira\Desktop\Medical\MedicalCare\MedicalCare\obj\Debug\MedicalCare.pdb
