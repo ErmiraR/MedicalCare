@@ -28,7 +28,7 @@ namespace MedicalCare
 				string fileNames = Path.GetFileName(FileUpload1.PostedFile.FileName);
 				FileUpload1.PostedFile.SaveAs(Server.MapPath("~/images/") + fileNames);
 				Refrence.WebService2 web = new Refrence.WebService2();
-				web.AddDoc(TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, TextBox6.Text, TextBox7.Text, TextBox8.Text, TextBox9.Text, "~/images/" + fileName);
+				web.AddDoc("~/images/" + fileName, TextBox2.Text, TextBox6.Text, TextBox7.Text, TextBox9.Text, TextBox8.Text, TextBox4.Text, TextBox5.Text, TextBox3.Text);
 				GridView1.DataSource = web.SelectDoc();
 				GridView1.DataBind();
 			}
@@ -51,7 +51,7 @@ namespace MedicalCare
 				string fileNames = Path.GetFileName(FileUpload1.PostedFile.FileName);
 				FileUpload1.PostedFile.SaveAs(Server.MapPath("~/images/") + fileNames);
 				Refrence.WebService2 web = new Refrence.WebService2();
-				web.UpdateDoc(int.Parse(TextBox1.Text),TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox5.Text, TextBox6.Text, TextBox7.Text, TextBox8.Text, TextBox9.Text, "~/images/" + fileName);
+				web.UpdateDoc(int.Parse(TextBox1.Text), "~/images/" + fileName, TextBox2.Text, TextBox6.Text, TextBox7.Text, TextBox9.Text, TextBox8.Text, TextBox4.Text, TextBox5.Text, TextBox3.Text);
 				GridView1.DataSource = web.SelectDoc();
 				GridView1.DataBind();
 			}
@@ -96,6 +96,21 @@ namespace MedicalCare
 			Refrence.WebService2 web = new Refrence.WebService2();
 			GridView1.DataSource = web.SelectDoc();
 			GridView1.DataBind();
+		}
+
+		protected void LinkButton2_Click(object sender, EventArgs e)
+		{
+			int rowid = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
+			TextBox1.Text = GridView1.Rows[rowid].Cells[1].Text;
+			TextBox2.Text = GridView1.Rows[rowid].Cells[3].Text;
+			TextBox3.Text = GridView1.Rows[rowid].Cells[4].Text;
+			TextBox4.Text = GridView1.Rows[rowid].Cells[9].Text;
+			TextBox5.Text = GridView1.Rows[rowid].Cells[10].Text;
+			TextBox6.Text = GridView1.Rows[rowid].Cells[7].Text;
+			TextBox7.Text = GridView1.Rows[rowid].Cells[5].Text;
+			TextBox8.Text = GridView1.Rows[rowid].Cells[8].Text;
+			TextBox9.Text = GridView1.Rows[rowid].Cells[6].Text;
+
 		}
 	}
 }

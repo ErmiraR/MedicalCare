@@ -21,7 +21,7 @@ namespace MedicalCare
 
 		//Add Dctor
 		[WebMethod]
-		public string AddDoc(string foto, string emri, string book, string email, string passi, string teli, string work, string sat, string dep)
+		public string AddDoc(string foto, string emri, string dep, string email, string passi, string book, string teli, string work, string sat)
 		{
 			Koneksion cn = new Koneksion();
 			SqlCommand cmd = new SqlCommand("adddoctor", cn.koneksion());
@@ -44,7 +44,7 @@ namespace MedicalCare
 
 		//Update Doctor
 		[WebMethod]
-		public string UpdateDoc(int ID, string foto, string emri, string book, string email, string passi, string teli, string work, string sat, string dep)
+		public string UpdateDoc(int ID, string foto, string emri, string dep, string email, string passi, string book, string teli, string work, string sat)
 		{
 			Koneksion cn = new Koneksion();	
 			SqlCommand cmd = new SqlCommand("updatedoctor", cn.koneksion());

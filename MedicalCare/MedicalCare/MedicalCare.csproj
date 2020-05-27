@@ -119,6 +119,7 @@
     <Content Include="images\f2.jpg" />
     <Content Include="images\gn.png" />
     <Content Include="images\gnc.png" />
+    <Content Include="images\icons\1.ico" />
     <Content Include="images\icons\favicon.ico" />
     <Content Include="images\kardioIcon.png" />
     <Content Include="images\logo.png" />

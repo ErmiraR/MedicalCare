@@ -120,6 +120,13 @@
 			<SortedAscendingHeaderStyle BackColor="#5A4C9D" />
 			<SortedDescendingCellStyle BackColor="#D8D8F0" />
 			<SortedDescendingHeaderStyle BackColor="#3E3277" />
+			<Columns>
+				<asp:TemplateField>
+					<ItemTemplate>
+					<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Select</asp:LinkButton>	
+					</ItemTemplate>
+				</asp:TemplateField>
+			</Columns>
 		</asp:GridView>
 		</div>
 		</div></div>

@@ -91,5 +91,17 @@ namespace MedicalCare
 			GridView1.DataSource = web.SelectDep();
 			GridView1.DataBind();
 		}
+
+		protected void LinkButton2_Click(object sender, EventArgs e)
+		{
+			int rowid = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
+			TextBox1.Text = GridView1.Rows[rowid].Cells[1].Text;
+			TextBox2.Text = GridView1.Rows[rowid].Cells[3].Text;
+			TextBox3.Text = GridView1.Rows[rowid].Cells[4].Text;
+
+			
+
+
+		}
 	}
 }

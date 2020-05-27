@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="DoctorAdmin.aspx.cs" Inherits="MedicalCare.DoctorAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+	
 	<style type="text/css">
 		.auto-style1 {
 			width: 104px;
@@ -194,6 +195,13 @@
 			<SortedAscendingHeaderStyle BackColor="#246B61" />
 			<SortedDescendingCellStyle BackColor="#D4DFE1" />
 			<SortedDescendingHeaderStyle BackColor="#15524A" />
+			<Columns>
+				<asp:TemplateField>
+					<ItemTemplate>
+					<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Select</asp:LinkButton>	
+					</ItemTemplate>
+				</asp:TemplateField>
+			</Columns>
 		</asp:GridView>
 			 </div>
 		 </div>
