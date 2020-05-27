@@ -17,6 +17,9 @@ namespace MedicalCare
 			Referenc.WebService1 web = new Referenc.WebService1();
 			GridView1.DataSource= web.SelectDep();
 			GridView1.DataBind();
+
+			times.Time t = new times.Time();
+			Label5.Text = t.GetServerLocalTime().ToString();
 		}
 
 		protected void Button1_Click(object sender, EventArgs e)
@@ -76,6 +79,14 @@ namespace MedicalCare
 
 		protected void LinkButton1_Click(object sender, EventArgs e)
 		{
+			Referenc.WebService1 web = new Referenc.WebService1();
+			GridView1.DataSource = web.SelectDep();
+			GridView1.DataBind();
+		}
+
+		protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+		{
+			GridView1.PageIndex = e.NewPageIndex;
 			Referenc.WebService1 web = new Referenc.WebService1();
 			GridView1.DataSource = web.SelectDep();
 			GridView1.DataBind();

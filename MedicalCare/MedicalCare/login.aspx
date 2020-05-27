@@ -2,8 +2,6 @@
 
 <!DOCTYPE html>
 
-
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Login</title>
@@ -54,7 +52,7 @@
                     <div class="login100-form validate-form p-b-33 p-t-5">
 
                         <div class="wrap-input100 validate-input" data-validate="Enter username">
-                            <asp:TextBox ID="TextBox1" runat="server" CssClass="input100" placeholder="User name"></asp:TextBox>
+                            <asp:TextBox ID="TextBox1" runat="server" CssClass="input100" placeholder="Username"></asp:TextBox>
                             <span class="focus-input100" data-placeholder="&#xe82a;"></span>
 
                         </div>
@@ -63,13 +61,13 @@
                             <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" CssClass="input100" placeholder="Password"></asp:TextBox>
                             <span class="focus-input100" data-placeholder="&#xe80f;"></span>
                         </div>
-                        <br />
-                        &nbsp; &nbsp; &nbsp; &nbsp; 
+
+                        &nbsp; 
                       <%--  /*Forget pasword*/--%>
                         <div class="form-item form-btn-wrp pl-4">
                             <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">Forget Password</button>
                         </div>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: black;">
+                     <%--   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="color: black;">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -89,29 +87,21 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>--%>
 
 
 
-                        &nbsp; &nbsp; &nbsp; &nbsp; 
         
 				
                         <div class="container-login100-form-btn m-t-32">
                             <asp:Button ID="Button2" CssClass="login100-form-btn" runat="server" Text="Login" OnClick="Button2_Click" />
-
+                  &nbsp; &nbsp;  <asp:Button ID="Button1" runat="server" Text="Close" CssClass="login100-form-btn " OnClick="Button1_Click" />
                         </div>
+                     
+                     
+                     
                         <br />
-                        <div class="row">
-                            <div class="col-md-6">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								<!--gabim-->
-                                <asp:Button ID="Button1" runat="server" Text="Close" CssClass="btn btn-danger" />
-
-                            </div>
-
-                        </div>
-                        <br />
-                        <br />
+                       
                     </div>
                 </div>
 

@@ -57,7 +57,10 @@
 	 <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
 	<br />
 	 <div class="container">
-           <h3 style=" color:green; text-align:center"> Doctor</h3>
+          <h2 style=" color:green; text-align:center"> Doctor</h2>
+		<div style="margin-left:900px">
+		  <asp:Label ID="Label11" runat="server" Text=""></asp:Label> 
+			</div>
             <hr  />
        <br />
 	<div class="row">
@@ -178,7 +181,8 @@
 		</asp:LinkButton>
 		</center>
 			<br />
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" GridLines="None" ForeColor="#333333">
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" GridLines="None" ForeColor="#333333"
+			 OnPageIndexChanging="GridView1_PageIndexChanging" AllowPaging="true" PageSize="5">
 			<AlternatingRowStyle BackColor="White" />
 			<EditRowStyle BackColor="#7C6F57" />
 			<FooterStyle BackColor="#1C5E55" ForeColor="White" Font-Bold="True" />

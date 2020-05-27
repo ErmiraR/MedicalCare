@@ -72,5 +72,19 @@ namespace MedicalCare
 				HttpContext.Current.Response.Redirect("login.aspx");
 			}
 		}
+
+		//Close button in Login
+		public void Close()
+		{
+			HttpContext.Current.Response.Redirect("Home.aspx");
+		}
+
+		//Back  button in Doctor Dashboard
+		public void Back()
+		{
+			HttpContext.Current.Response.Redirect("doctorLog.aspx");
+		}
+
+		
 	}
 }

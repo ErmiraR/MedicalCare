@@ -42,6 +42,9 @@
 	<br />
 	 <div class="container">
            <h3 style=" color:blue; text-align:center"> Departament</h3>
+		 <div style="margin-left:900px">
+		 <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+			 </div>
             <hr  />
        <br />
 	<div class="row">
@@ -104,7 +107,9 @@
 		</asp:LinkButton>
 		</center>
 			<br />
-        <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal">
+        <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#E7E7FF"
+			BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" OnPageIndexChanging="GridView1_PageIndexChanging" 
+			 AllowPaging="true" PageSize="2">
 			<AlternatingRowStyle BackColor="#F7F7F7" />
 			<FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
 			<HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />

@@ -222,7 +222,7 @@
           <div class="card-body py-3" style="color:white">
             <i class="fa fa-twitter fa-2x"></i>
             <h3 class="small">TWITTER</h3>
-            <h4>2000 users</h4>
+            <h4>700 users</h4>
           </div>
             </div>
         <!-- Card Blue -->
@@ -238,7 +238,7 @@
           <div class="card-body py-3" style="color:white">
             <i class="fa fa-comment fa-2x"></i>
             <h3 class="small">CHAT</h3>
-            <h4>2000 users</h4>
+            <h4>1000 users</h4>
           </div>
             </div>
         <!-- Card Red -->

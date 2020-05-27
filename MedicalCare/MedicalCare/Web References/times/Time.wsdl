@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetDatabaseInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDatabaseInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatabaseInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatabaseUtcTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDatabaseUtcTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDatabaseUtcTimeResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRemoteTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetRemoteTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRemoteTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServerLocalTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerLocalTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetServerLocalTimeResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServerUtcTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerUtcTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetServerUtcTimeResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dateTime" type="s:dateTime" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDatabaseInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatabaseInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatabaseInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseUtcTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatabaseUtcTime" />
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseUtcTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatabaseUtcTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRemoteTime" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRemoteTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServerLocalTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerLocalTime" />
+  </wsdl:message>
+  <wsdl:message name="GetServerLocalTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerLocalTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServerUtcTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerUtcTime" />
+  </wsdl:message>
+  <wsdl:message name="GetServerUtcTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerUtcTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseInfoHttpGetIn" />
+  <wsdl:message name="GetDatabaseInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseUtcTimeHttpGetIn" />
+  <wsdl:message name="GetDatabaseUtcTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:dateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteTimeHttpGetIn" />
+  <wsdl:message name="GetRemoteTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServerLocalTimeHttpGetIn" />
+  <wsdl:message name="GetServerLocalTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:dateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetServerUtcTimeHttpGetIn" />
+  <wsdl:message name="GetServerUtcTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:dateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseInfoHttpPostIn" />
+  <wsdl:message name="GetDatabaseInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseUtcTimeHttpPostIn" />
+  <wsdl:message name="GetDatabaseUtcTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:dateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetRemoteTimeHttpPostIn" />
+  <wsdl:message name="GetRemoteTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetServerLocalTimeHttpPostIn" />
+  <wsdl:message name="GetServerLocalTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:dateTime" />
+  </wsdl:message>
+  <wsdl:message name="GetServerUtcTimeHttpPostIn" />
+  <wsdl:message name="GetServerUtcTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:dateTime" />
+  </wsdl:message>
+  <wsdl:portType name="TimeSoap">
+    <wsdl:operation name="GetDatabaseInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get information about database time.</wsdl:documentation>
+      <wsdl:input message="tns:GetDatabaseInfoSoapIn" />
+      <wsdl:output message="tns:GetDatabaseInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get database UTC time.</wsdl:documentation>
+      <wsdl:input message="tns:GetDatabaseUtcTimeSoapIn" />
+      <wsdl:output message="tns:GetDatabaseUtcTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get remote server UTC time.</wsdl:documentation>
+      <wsdl:input message="tns:GetRemoteTimeSoapIn" />
+      <wsdl:output message="tns:GetRemoteTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Local time of Server.</wsdl:documentation>
+      <wsdl:input message="tns:GetServerLocalTimeSoapIn" />
+      <wsdl:output message="tns:GetServerLocalTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get UTC time of Server.</wsdl:documentation>
+      <wsdl:input message="tns:GetServerUtcTimeSoapIn" />
+      <wsdl:output message="tns:GetServerUtcTimeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TimeHttpGet">
+    <wsdl:operation name="GetDatabaseInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get information about database time.</wsdl:documentation>
+      <wsdl:input message="tns:GetDatabaseInfoHttpGetIn" />
+      <wsdl:output message="tns:GetDatabaseInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get database UTC time.</wsdl:documentation>
+      <wsdl:input message="tns:GetDatabaseUtcTimeHttpGetIn" />
+      <wsdl:output message="tns:GetDatabaseUtcTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get remote server UTC time.</wsdl:documentation>
+      <wsdl:input message="tns:GetRemoteTimeHttpGetIn" />
+      <wsdl:output message="tns:GetRemoteTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Local time of Server.</wsdl:documentation>
+      <wsdl:input message="tns:GetServerLocalTimeHttpGetIn" />
+      <wsdl:output message="tns:GetServerLocalTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get UTC time of Server.</wsdl:documentation>
+      <wsdl:input message="tns:GetServerUtcTimeHttpGetIn" />
+      <wsdl:output message="tns:GetServerUtcTimeHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TimeHttpPost">
+    <wsdl:operation name="GetDatabaseInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get information about database time.</wsdl:documentation>
+      <wsdl:input message="tns:GetDatabaseInfoHttpPostIn" />
+      <wsdl:output message="tns:GetDatabaseInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get database UTC time.</wsdl:documentation>
+      <wsdl:input message="tns:GetDatabaseUtcTimeHttpPostIn" />
+      <wsdl:output message="tns:GetDatabaseUtcTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get remote server UTC time.</wsdl:documentation>
+      <wsdl:input message="tns:GetRemoteTimeHttpPostIn" />
+      <wsdl:output message="tns:GetRemoteTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Local time of Server.</wsdl:documentation>
+      <wsdl:input message="tns:GetServerLocalTimeHttpPostIn" />
+      <wsdl:output message="tns:GetServerLocalTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get UTC time of Server.</wsdl:documentation>
+      <wsdl:input message="tns:GetServerUtcTimeHttpPostIn" />
+      <wsdl:output message="tns:GetServerUtcTimeHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TimeSoap" type="tns:TimeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDatabaseInfo">
+      <soap:operation soapAction="http://tempuri.org/GetDatabaseInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <soap:operation soapAction="http://tempuri.org/GetDatabaseUtcTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <soap:operation soapAction="http://tempuri.org/GetRemoteTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <soap:operation soapAction="http://tempuri.org/GetServerLocalTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <soap:operation soapAction="http://tempuri.org/GetServerUtcTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TimeSoap12" type="tns:TimeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDatabaseInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetDatabaseInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <soap12:operation soapAction="http://tempuri.org/GetDatabaseUtcTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <soap12:operation soapAction="http://tempuri.org/GetRemoteTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <soap12:operation soapAction="http://tempuri.org/GetServerLocalTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <soap12:operation soapAction="http://tempuri.org/GetServerUtcTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TimeHttpGet" type="tns:TimeHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetDatabaseInfo">
+      <http:operation location="/GetDatabaseInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <http:operation location="/GetDatabaseUtcTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <http:operation location="/GetRemoteTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <http:operation location="/GetServerLocalTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <http:operation location="/GetServerUtcTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TimeHttpPost" type="tns:TimeHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetDatabaseInfo">
+      <http:operation location="/GetDatabaseInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <http:operation location="/GetDatabaseUtcTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <http:operation location="/GetRemoteTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <http:operation location="/GetServerLocalTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <http:operation location="/GetServerUtcTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Time">
+    <wsdl:port name="TimeSoap" binding="tns:TimeSoap">
+      <soap:address location="https://www.satan.lt/WebServices/Time.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TimeSoap12" binding="tns:TimeSoap12">
+      <soap12:address location="https://www.satan.lt/WebServices/Time.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TimeHttpGet" binding="tns:TimeHttpGet">
+      <http:address location="https://www.satan.lt/WebServices/Time.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TimeHttpPost" binding="tns:TimeHttpPost">
+      <http:address location="https://www.satan.lt/WebServices/Time.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

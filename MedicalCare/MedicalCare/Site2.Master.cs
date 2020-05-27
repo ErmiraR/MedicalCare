@@ -11,13 +11,15 @@ namespace MedicalCare
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
 		}
 
 		protected void LinkButton1_Click(object sender, EventArgs e)
 		{
-			Logo log = new Logo();
-			log.Logout();
+			app.API o = new app.API();
+			o.Logout();
+			HttpContext.Current.Response.Redirect("login.aspx");
+			//Logo log = new Logo();
+			//log.Logout();
 		}
 	}
 }

@@ -153,6 +153,7 @@
     <Content Include="NeuroDep.aspx" />
     <Content Include="oftDep.aspx" />
     <Content Include="pediatricsDep.aspx" />
+    <Content Include="Print.aspx" />
     <Content Include="rentDep.aspx" />
     <Content Include="user.jpg" />
     <Content Include="vendor\animate\animate.css" />
@@ -185,6 +186,7 @@
     <Content Include="vendor\select2\select2.js" />
     <Content Include="vendor\select2\select2.min.css" />
     <Content Include="vendor\select2\select2.min.js" />
+    <None Include="Web References\app\API.disco" />
     <Content Include="Web References\Referenc\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -193,7 +195,17 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
+    <None Include="Web References\app\API.wsdl" />
+    <Content Include="Web References\app\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <None Include="Web References\Refrence\WebService2.disco" />
+    <Content Include="Web References\times\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\times\Time.disco" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebService2.asmx" />
     <None Include="Web References\Referenc\WebService1.disco" />
@@ -314,6 +326,13 @@
     <Compile Include="pediatricsDep.aspx.designer.cs">
       <DependentUpon>pediatricsDep.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Print.aspx.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print.aspx.designer.cs">
+      <DependentUpon>Print.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -342,12 +361,22 @@
     <Compile Include="Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
     </Compile>
+    <Compile Include="Web References\app\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\Referenc\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\Refrence\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\times\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -457,6 +486,7 @@
     <Content Include="Site2.Master" />
     <None Include="Web References\Referenc\WebService1.wsdl" />
     <None Include="Web References\Refrence\WebService2.wsdl" />
+    <None Include="Web References\times\Time.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -471,6 +501,17 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
+    <WebReferenceUrl Include="http://en.cadec-online.com/API.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\app\</RelPath>
+      <UpdateFromURL>http://en.cadec-online.com/API.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MedicalCare_app_API</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="https://localhost:44344/WebService1.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\Referenc\</RelPath>
@@ -492,6 +533,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>MedicalCare_Refrence_WebService2</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://www.satan.lt/WebServices/Time.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\times\</RelPath>
+      <UpdateFromURL>https://www.satan.lt/WebServices/Time.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MedicalCare_times_Time</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>

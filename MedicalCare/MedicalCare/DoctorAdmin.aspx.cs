@@ -15,6 +15,9 @@ namespace MedicalCare
 			Refrence.WebService2 web = new Refrence.WebService2();
 			GridView1.DataSource = web.SelectDoc();
 			GridView1.DataBind();
+
+			times.Time t = new times.Time();
+			Label11.Text = t.GetServerLocalTime().ToString();
 		}
 
 		protected void Button1_Click(object sender, EventArgs e)
@@ -84,6 +87,14 @@ namespace MedicalCare
 		{
 			Search doc = new Search();
 			GridView1.DataSource= doc.searchDoc(TextBox10.Text);
+			GridView1.DataBind();
+		}
+
+		protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+		{
+			GridView1.PageIndex = e.NewPageIndex;
+			Refrence.WebService2 web = new Refrence.WebService2();
+			GridView1.DataSource = web.SelectDoc();
 			GridView1.DataBind();
 		}
 	}

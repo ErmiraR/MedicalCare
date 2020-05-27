@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.cadec-online.com" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.cadec-online.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CADEC API</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cadec-online.com">
+      <s:element name="CadecVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="CadecVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CadecVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Logout">
+        <s:complexType />
+      </s:element>
+      <s:element name="LogoutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogoutResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fibers">
+        <s:complexType />
+      </s:element>
+      <s:element name="FibersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FibersResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Matrices">
+        <s:complexType />
+      </s:element>
+      <s:element name="MatricesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MatricesResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Laminae">
+        <s:complexType />
+      </s:element>
+      <s:element name="LaminaeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LaminaeResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Laminates">
+        <s:complexType />
+      </s:element>
+      <s:element name="LaminatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LaminatesResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fiber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FiberId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FiberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FiberResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Matrix">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MatrixId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MatrixResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MatrixResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Lamina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LaminaId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LaminaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LaminaResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Laminate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LaminateId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LaminateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LaminateResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="ArrayOfArrayOfString" nillable="true" type="tns:ArrayOfArrayOfString" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CadecVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:CadecVersion" />
+  </wsdl:message>
+  <wsdl:message name="CadecVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:CadecVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapIn">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="FibersSoapIn">
+    <wsdl:part name="parameters" element="tns:Fibers" />
+  </wsdl:message>
+  <wsdl:message name="FibersSoapOut">
+    <wsdl:part name="parameters" element="tns:FibersResponse" />
+  </wsdl:message>
+  <wsdl:message name="MatricesSoapIn">
+    <wsdl:part name="parameters" element="tns:Matrices" />
+  </wsdl:message>
+  <wsdl:message name="MatricesSoapOut">
+    <wsdl:part name="parameters" element="tns:MatricesResponse" />
+  </wsdl:message>
+  <wsdl:message name="LaminaeSoapIn">
+    <wsdl:part name="parameters" element="tns:Laminae" />
+  </wsdl:message>
+  <wsdl:message name="LaminaeSoapOut">
+    <wsdl:part name="parameters" element="tns:LaminaeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LaminatesSoapIn">
+    <wsdl:part name="parameters" element="tns:Laminates" />
+  </wsdl:message>
+  <wsdl:message name="LaminatesSoapOut">
+    <wsdl:part name="parameters" element="tns:LaminatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="FiberSoapIn">
+    <wsdl:part name="parameters" element="tns:Fiber" />
+  </wsdl:message>
+  <wsdl:message name="FiberSoapOut">
+    <wsdl:part name="parameters" element="tns:FiberResponse" />
+  </wsdl:message>
+  <wsdl:message name="MatrixSoapIn">
+    <wsdl:part name="parameters" element="tns:Matrix" />
+  </wsdl:message>
+  <wsdl:message name="MatrixSoapOut">
+    <wsdl:part name="parameters" element="tns:MatrixResponse" />
+  </wsdl:message>
+  <wsdl:message name="LaminaSoapIn">
+    <wsdl:part name="parameters" element="tns:Lamina" />
+  </wsdl:message>
+  <wsdl:message name="LaminaSoapOut">
+    <wsdl:part name="parameters" element="tns:LaminaResponse" />
+  </wsdl:message>
+  <wsdl:message name="LaminateSoapIn">
+    <wsdl:part name="parameters" element="tns:Laminate" />
+  </wsdl:message>
+  <wsdl:message name="LaminateSoapOut">
+    <wsdl:part name="parameters" element="tns:LaminateResponse" />
+  </wsdl:message>
+  <wsdl:message name="CadecVersionHttpGetIn" />
+  <wsdl:message name="CadecVersionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="LogoutHttpGetIn" />
+  <wsdl:message name="LogoutHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="FibersHttpGetIn" />
+  <wsdl:message name="FibersHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="MatricesHttpGetIn" />
+  <wsdl:message name="MatricesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="LaminaeHttpGetIn" />
+  <wsdl:message name="LaminaeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="LaminatesHttpGetIn" />
+  <wsdl:message name="LaminatesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="FiberHttpGetIn">
+    <wsdl:part name="FiberId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FiberHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="MatrixHttpGetIn">
+    <wsdl:part name="MatrixId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MatrixHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="LaminaHttpGetIn">
+    <wsdl:part name="LaminaId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaminaHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="LaminateHttpGetIn">
+    <wsdl:part name="LaminateId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaminateHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="CadecVersionHttpPostIn" />
+  <wsdl:message name="CadecVersionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="LogoutHttpPostIn" />
+  <wsdl:message name="LogoutHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="FibersHttpPostIn" />
+  <wsdl:message name="FibersHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="MatricesHttpPostIn" />
+  <wsdl:message name="MatricesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="LaminaeHttpPostIn" />
+  <wsdl:message name="LaminaeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="LaminatesHttpPostIn" />
+  <wsdl:message name="LaminatesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="FiberHttpPostIn">
+    <wsdl:part name="FiberId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FiberHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="MatrixHttpPostIn">
+    <wsdl:part name="MatrixId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MatrixHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="LaminaHttpPostIn">
+    <wsdl:part name="LaminaId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaminaHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="LaminateHttpPostIn">
+    <wsdl:part name="LaminateId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LaminateHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfArrayOfString" />
+  </wsdl:message>
+  <wsdl:portType name="APISoap">
+    <wsdl:operation name="CadecVersion">
+      <wsdl:input message="tns:CadecVersionSoapIn" />
+      <wsdl:output message="tns:CadecVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This should be the first method to call.</wsdl:documentation>
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Dont forget to log out!</wsdl:documentation>
+      <wsdl:input message="tns:LogoutSoapIn" />
+      <wsdl:output message="tns:LogoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fibers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all your fibers</wsdl:documentation>
+      <wsdl:input message="tns:FibersSoapIn" />
+      <wsdl:output message="tns:FibersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Matrices">
+      <wsdl:input message="tns:MatricesSoapIn" />
+      <wsdl:output message="tns:MatricesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laminae">
+      <wsdl:input message="tns:LaminaeSoapIn" />
+      <wsdl:output message="tns:LaminaeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laminates">
+      <wsdl:input message="tns:LaminatesSoapIn" />
+      <wsdl:output message="tns:LaminatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fiber">
+      <wsdl:input message="tns:FiberSoapIn" />
+      <wsdl:output message="tns:FiberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Matrix">
+      <wsdl:input message="tns:MatrixSoapIn" />
+      <wsdl:output message="tns:MatrixSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Lamina">
+      <wsdl:input message="tns:LaminaSoapIn" />
+      <wsdl:output message="tns:LaminaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laminate">
+      <wsdl:input message="tns:LaminateSoapIn" />
+      <wsdl:output message="tns:LaminateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="APIHttpGet">
+    <wsdl:operation name="CadecVersion">
+      <wsdl:input message="tns:CadecVersionHttpGetIn" />
+      <wsdl:output message="tns:CadecVersionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This should be the first method to call.</wsdl:documentation>
+      <wsdl:input message="tns:LoginHttpGetIn" />
+      <wsdl:output message="tns:LoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Dont forget to log out!</wsdl:documentation>
+      <wsdl:input message="tns:LogoutHttpGetIn" />
+      <wsdl:output message="tns:LogoutHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fibers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all your fibers</wsdl:documentation>
+      <wsdl:input message="tns:FibersHttpGetIn" />
+      <wsdl:output message="tns:FibersHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Matrices">
+      <wsdl:input message="tns:MatricesHttpGetIn" />
+      <wsdl:output message="tns:MatricesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laminae">
+      <wsdl:input message="tns:LaminaeHttpGetIn" />
+      <wsdl:output message="tns:LaminaeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laminates">
+      <wsdl:input message="tns:LaminatesHttpGetIn" />
+      <wsdl:output message="tns:LaminatesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fiber">
+      <wsdl:input message="tns:FiberHttpGetIn" />
+      <wsdl:output message="tns:FiberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Matrix">
+      <wsdl:input message="tns:MatrixHttpGetIn" />
+      <wsdl:output message="tns:MatrixHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Lamina">
+      <wsdl:input message="tns:LaminaHttpGetIn" />
+      <wsdl:output message="tns:LaminaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laminate">
+      <wsdl:input message="tns:LaminateHttpGetIn" />
+      <wsdl:output message="tns:LaminateHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="APIHttpPost">
+    <wsdl:operation name="CadecVersion">
+      <wsdl:input message="tns:CadecVersionHttpPostIn" />
+      <wsdl:output message="tns:CadecVersionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This should be the first method to call.</wsdl:documentation>
+      <wsdl:input message="tns:LoginHttpPostIn" />
+      <wsdl:output message="tns:LoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Dont forget to log out!</wsdl:documentation>
+      <wsdl:input message="tns:LogoutHttpPostIn" />
+      <wsdl:output message="tns:LogoutHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fibers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all your fibers</wsdl:documentation>
+      <wsdl:input message="tns:FibersHttpPostIn" />
+      <wsdl:output message="tns:FibersHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Matrices">
+      <wsdl:input message="tns:MatricesHttpPostIn" />
+      <wsdl:output message="tns:MatricesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laminae">
+      <wsdl:input message="tns:LaminaeHttpPostIn" />
+      <wsdl:output message="tns:LaminaeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laminates">
+      <wsdl:input message="tns:LaminatesHttpPostIn" />
+      <wsdl:output message="tns:LaminatesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fiber">
+      <wsdl:input message="tns:FiberHttpPostIn" />
+      <wsdl:output message="tns:FiberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Matrix">
+      <wsdl:input message="tns:MatrixHttpPostIn" />
+      <wsdl:output message="tns:MatrixHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Lamina">
+      <wsdl:input message="tns:LaminaHttpPostIn" />
+      <wsdl:output message="tns:LaminaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Laminate">
+      <wsdl:input message="tns:LaminateHttpPostIn" />
+      <wsdl:output message="tns:LaminateHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="APISoap" type="tns:APISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CadecVersion">
+      <soap:operation soapAction="http://www.cadec-online.com/CadecVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://www.cadec-online.com/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://www.cadec-online.com/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fibers">
+      <soap:operation soapAction="http://www.cadec-online.com/Fibers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Matrices">
+      <soap:operation soapAction="http://www.cadec-online.com/Matrices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laminae">
+      <soap:operation soapAction="http://www.cadec-online.com/Laminae" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laminates">
+      <soap:operation soapAction="http://www.cadec-online.com/Laminates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fiber">
+      <soap:operation soapAction="http://www.cadec-online.com/Fiber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Matrix">
+      <soap:operation soapAction="http://www.cadec-online.com/Matrix" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lamina">
+      <soap:operation soapAction="http://www.cadec-online.com/Lamina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laminate">
+      <soap:operation soapAction="http://www.cadec-online.com/Laminate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="APISoap12" type="tns:APISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CadecVersion">
+      <soap12:operation soapAction="http://www.cadec-online.com/CadecVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://www.cadec-online.com/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap12:operation soapAction="http://www.cadec-online.com/Logout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fibers">
+      <soap12:operation soapAction="http://www.cadec-online.com/Fibers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Matrices">
+      <soap12:operation soapAction="http://www.cadec-online.com/Matrices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laminae">
+      <soap12:operation soapAction="http://www.cadec-online.com/Laminae" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laminates">
+      <soap12:operation soapAction="http://www.cadec-online.com/Laminates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fiber">
+      <soap12:operation soapAction="http://www.cadec-online.com/Fiber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Matrix">
+      <soap12:operation soapAction="http://www.cadec-online.com/Matrix" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lamina">
+      <soap12:operation soapAction="http://www.cadec-online.com/Lamina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laminate">
+      <soap12:operation soapAction="http://www.cadec-online.com/Laminate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="APIHttpGet" type="tns:APIHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="CadecVersion">
+      <http:operation location="/CadecVersion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <http:operation location="/Logout" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fibers">
+      <http:operation location="/Fibers" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Matrices">
+      <http:operation location="/Matrices" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laminae">
+      <http:operation location="/Laminae" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laminates">
+      <http:operation location="/Laminates" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fiber">
+      <http:operation location="/Fiber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Matrix">
+      <http:operation location="/Matrix" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lamina">
+      <http:operation location="/Lamina" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laminate">
+      <http:operation location="/Laminate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="APIHttpPost" type="tns:APIHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="CadecVersion">
+      <http:operation location="/CadecVersion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <http:operation location="/Logout" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fibers">
+      <http:operation location="/Fibers" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Matrices">
+      <http:operation location="/Matrices" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laminae">
+      <http:operation location="/Laminae" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laminates">
+      <http:operation location="/Laminates" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fiber">
+      <http:operation location="/Fiber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Matrix">
+      <http:operation location="/Matrix" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Lamina">
+      <http:operation location="/Lamina" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Laminate">
+      <http:operation location="/Laminate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="API">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">CADEC API</wsdl:documentation>
+    <wsdl:port name="APISoap" binding="tns:APISoap">
+      <soap:address location="http://en.cadec-online.com/API.asmx" />
+    </wsdl:port>
+    <wsdl:port name="APISoap12" binding="tns:APISoap12">
+      <soap12:address location="http://en.cadec-online.com/API.asmx" />
+    </wsdl:port>
+    <wsdl:port name="APIHttpGet" binding="tns:APIHttpGet">
+      <http:address location="http://en.cadec-online.com/API.asmx" />
+    </wsdl:port>
+    <wsdl:port name="APIHttpPost" binding="tns:APIHttpPost">
+      <http:address location="http://en.cadec-online.com/API.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -52,7 +52,7 @@
     <ul class="navbar-nav mr-auto">
       
     <form class="form-inline my-2 my-lg-0" >
-      	 
+		    	 
  <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click"   >
      
      <i  class="fa fa-sign-out fa-2x"></i>

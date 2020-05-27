@@ -42,5 +42,25 @@ namespace MedicalCare.Properties {
                 return ((string)(this["MedicalCare_Refrence_WebService2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://www.satan.lt/WebServices/Time.asmx")]
+        public string MedicalCare_times_Time {
+            get {
+                return ((string)(this["MedicalCare_times_Time"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://en.cadec-online.com/API.asmx")]
+        public string MedicalCare_app_API {
+            get {
+                return ((string)(this["MedicalCare_app_API"]));
+            }
+        }
     }
 }

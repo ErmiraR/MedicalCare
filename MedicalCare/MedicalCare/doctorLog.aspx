@@ -17,8 +17,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: whitesmoke">
+     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: whitesmoke">
  &nbsp;&nbsp;&nbsp;
       <image src="images/logon.jpeg" alt="" height="50px" width="150px" />
 
@@ -40,24 +39,15 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      
-    <form class="form-inline my-2 my-lg-0" >
-      	 
- <asp:LinkButton ID="LinkButton1" runat="server"   OnClick="LinkButton1_Click"  >
+
+  <asp:LinkButton ID="LinkButton1" runat="server"   OnClick="LinkButton1_Click"  >
      
      <i  class="fa fa-sign-out fa-2x"></i>
  </asp:LinkButton>
-			 
 
-	
-     
-    </form>
-  </div>
 </nav>
             <b><h2>
-				<div  class="container-fluid"  style =" background-image:  url(user.jpg) ;  "  >
+				<div    style =" background-image:  url(user.jpg) ;   "  >
 				
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<br />
@@ -84,15 +74,20 @@
 &nbsp;&nbsp;
                 
                 <asp:Button ID="Button1" runat="server" Text="Search" CssClass="btn btn-outline-info" style="border-radius:50%" OnClick="Button1_Click" >
-                    
+               
                 </asp:Button>
+                  &nbsp;  <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click"  >
+			<i class="fa fa-retweet fa"></i>
+		</asp:LinkButton>   
                    </div>
 				<br /><br />
 				<br />
-            <div style="margin-left:150px;  text-align:center">
+            <div style="margin-left:200px;  text-align:center">
 			<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" DataKeyNames="ID"
                 OnRowDataBound="OnRowDataBound" OnRowEditing="OnRowEditing" OnRowCancelingEdit="OnRowCancelingEdit" 
-                OnRowUpdating="OnRowUpdating" OnRowDeleting="OnRowDeleting" EmptyDataText="No pacient" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical"  >
+                OnRowUpdating="OnRowUpdating" OnRowDeleting="OnRowDeleting" EmptyDataText="No pacient" 
+                BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
+                GridLines="Vertical" AllowPaging="true" PageSize="10" OnPageIndexChanging="GridView1_PageIndexChanging">
                 
                 
 				<AlternatingRowStyle BackColor="#DCDCDC" />
@@ -173,9 +168,10 @@
 
 <ItemStyle Width="150px"></ItemStyle>
     </asp:TemplateField>
-    <asp:CommandField ButtonType="Link" ShowEditButton="true" ShowDeleteButton="true" ItemStyle-Width="140">
-<ItemStyle Width="150px"></ItemStyle>
+    <asp:CommandField ButtonType="Link" ShowEditButton="true" ShowDeleteButton="true" ItemStyle-Width="100">
+<ItemStyle Width="100px"></ItemStyle>
 	</asp:CommandField>
+  <asp:HyperLinkField Text="Print" DataNavigateUrlFields=" Name, Surname, Email, Number, Therapy, Data, Ora " DataNavigateUrlFormatString="Print.aspx?Name={0}&Surname={1}&Email={2}&Number={3}&Therapy={4}&Data={5}&Ora={6}" />
     </Columns>
                 	
 				<FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
@@ -190,7 +186,7 @@
                 	
 			</asp:GridView>	
                 </div>
-        </div>
+      
     </form>
 </body>
 </html>
