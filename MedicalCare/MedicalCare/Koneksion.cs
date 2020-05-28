@@ -12,7 +12,7 @@ namespace MedicalCare
 	{
 		public SqlConnection koneksion()
 		{
-			SqlConnection con = new SqlConnection("Data Source=EPA;Initial Catalog=medicare;Integrated Security=True");
+			SqlConnection con = new SqlConnection("Data Source=SEMINA-PC\\SQLEXPRESS;Initial Catalog=hospital;Integrated Security=True");
 			con.Open();
 			return con;
 		}

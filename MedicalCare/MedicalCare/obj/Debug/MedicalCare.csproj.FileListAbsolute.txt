@@ -285,7 +285,6 @@ C:\Users\User3318\Desktop\medicalcare2\MedicalCare\MedicalCare\bin\roslyn\VBCSCo
 C:\Users\User3318\Desktop\medicalcare2\MedicalCare\MedicalCare\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\User3318\Desktop\medicalcare2\MedicalCare\MedicalCare\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\User3318\Desktop\medicalcare2\MedicalCare\MedicalCare\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\User3318\Desktop\medicalcare2\MedicalCare\MedicalCare\obj\Debug\MedicalCare.csprojAssemblyReference.cache
 C:\Users\User3318\Desktop\medicalcare2\MedicalCare\MedicalCare\obj\Debug\MedicalCare.csproj.CoreCompileInputs.cache
 C:\Users\User3318\Desktop\medicalcare2\MedicalCare\MedicalCare\obj\Debug\MedicalCare.csproj.CopyComplete
 C:\Users\User3318\Desktop\medicalcare2\MedicalCare\MedicalCare\obj\Debug\MedicalCare.dll

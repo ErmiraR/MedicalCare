@@ -1,11 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="departments.aspx.cs" Inherits="MedicalCare.Departments" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="departments.aspx.cs" Inherits="MedicalCare.Depi" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+   	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
 
 	<%--============DEPARTMENT HEADER OR JUBOTRON=================--%>
-
-	<div class="jumbotron jumbotron-fluid bg-dark">
+		<div class="jumbotron jumbotron-fluid bg-dark">
 		<div class="jumbotron-background">
 			<img src="images/aboutHeader.jpg">
 		</div>
@@ -19,107 +20,38 @@
 			</p>
 		</div>
 	</div>
-
-	<%--===============DEPARTMENT CATEGORIES OR CARDS===============--%>
+	<br />
 	<div class="container">
-        <div class="row pt-5 m-auto">
-            <div class="col-md-6 col-lg-4 pb-3">
+        <div class="row  ">
+	<asp:ListView runat="server" ID="ListView1">
+		<ItemTemplate>
+		
+            <div class="col-md-4 col-lg-4 pb-3">
                 <div class="card card-custom bg-white border-white border-0">
-                    <div class="card-custom-img" style="background-image: url(images/dp1.png);"></div>
+                   <asp:Image runat="server" ID="Image1"  ImageUrl='<%#Eval("Img") %>' CssClass="card-custom-img"  />
                     <div class="card-custom-avatar">
-                        <img class="img-fluid" src="images/gn.png" alt="Avatar" />
+						<asp:Image runat="server"  ImageUrl='<%#Eval("Img1") %>' CssClass="img-fluid" ID="Image2"  />
+                       
                     </div>
                     <div class="card-body" style="overflow-y: auto">
-                        <h4 class="card-title">General Health Care</h4>
-						<p class="card-text">Department of General Health Care</p>
+						<h4 class="card-title"><%# Eval("Heder") %></h4>
+                      <p class="card-text">Department of <%# Eval("Heder") %></p>
                     </div>
                     <div class="card-footer" style="background: inherit; border-color: inherit;">
-                        <a href="generalCareDep.aspx" class="btn btn-dark">View more</a>
-                    </div>
-                </div>
-            </div>
+                      <asp:LinkButton runat="server"  PostBackUrl='<%# "InfoDep.aspx?ID="+ Eval("ID") %>' CssClass="btn btn-dark" >
+					View more		
 
-            <div class="col-md-6 col-lg-4 pb-3">
-                <div class="card card-custom bg-white border-white border-0">
-                    <div class="card-custom-img" style="background-image: url(images/dp2.png);"></div>
-                    <div class="card-custom-avatar">
-                        <img class="img-fluid" src="images/pd.png" alt="Avatar" />
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Pediatrics</h4>
-						<p class="card-text">Department of Pediatrics</p>
-                    </div>
-                    <div class="card-footer" style="background: inherit; border-color: inherit;">
-                        <a href="pediatricsDep.aspx" class="btn btn-dark">View more</a>
+            </asp:LinkButton>  
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6 col-lg-4 pb-3">
-                <div class="card card-custom bg-white border-white border-0">
-                    <div class="card-custom-img" style="background-image: url(images/dp3.png);"></div>
-                    <div class="card-custom-avatar">
-                        <img class="img-fluid" src="images/radio.png" alt="Avatar" />
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Roentgenology</h4>
-						<p class="card-text">Department of Roentgenology</p>
-                    </div>
-                    <div class="card-footer" style="background: inherit; border-color: inherit;">
-                        <a href="rentDep.aspx" class="btn btn-dark">View more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row pt-5 m-auto">
-            <div class="col-md-6 col-lg-4 pb-3">
-                <div class="card card-custom bg-white border-white border-0">
-                    <div class="card-custom-img" style="background-image: url(images/dp4.png);"></div>
-                    <div class="card-custom-avatar">
-                        <img class="img-fluid" src="images/neu.png" alt="Avatar" />
-                    </div>
-                    <div class="card-body" style="overflow-y: auto">
-                        <h4 class="card-title">Neurology</h4>
-						<p class="card-text">Department of Neurology</p>
-                    </div>
-                    <div class="card-footer" style="background: inherit; border-color: inherit;">
-                        <a href="neuroDep.aspx" class="btn btn-danger">View more</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 pb-3">
-                <div class="card card-custom bg-white border-white border-0">
-                    <div class="card-custom-img" style="background-image: url(images/dp5.png);"></div>
-                    <div class="card-custom-avatar">
-                        <img class="img-fluid" src="images/oft.png" alt="Avatar" />
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Ophthalmology</h4>
-						<p class="card-text">Department of Ophthalmology</p>
-                    </div>
-                    <div class="card-footer" style="background: inherit; border-color: inherit;">
-                        <a href="oftDep.aspx" class="btn btn-danger">View more</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 pb-3">
-                <div class="card card-custom bg-white border-white border-0">
-                    <div class="card-custom-img" style="background-image: url(images/dp6.png);"></div>
-                    <div class="card-custom-avatar">
-                        <img class="img-fluid" src="images/crd.png" alt="Avatar" />
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">Cardiology</h4>
-						<p class="card-text">Department of Cardiology</p>
-                    </div>
-                    <div class="card-footer" style="background: inherit; border-color: inherit;">
-                        <a href="cardioDep.aspx" class="btn btn-danger">View more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div><br /><br />
+			
+			</ItemTemplate>
+	</asp:ListView>
+			
+	</div>
+		
+			</div>
+	<br />
 </asp:Content>
+					
