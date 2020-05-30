@@ -1,7 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Appointment.aspx.cs" Inherits="MedicalCare.Appointment" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
+    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">MedicalCare</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Faleminderit, Termini juaj u krye me sukses. 
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
      <div class="background-termin">
         <div class="termin-form">
 
@@ -24,9 +44,9 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="dcName" DataValueField="dcName"></asp:DropDownList>
-                 
+
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=desktop-0os3ple;Initial Catalog=spitali;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [dcName] FROM [doctors]"></asp:SqlDataSource>
-                 
+
                 </div>
                 <div class="form-group col-md-6">
                     <asp:DropDownList ID="DropDownList2" CssClass="form-control" runat="server">
@@ -37,7 +57,7 @@
                         <asp:ListItem>Ophtamology</asp:ListItem>
                         <asp:ListItem>Cardiology</asp:ListItem>
                     </asp:DropDownList>
-                 </div>
+                </div>
                 <div class="form-group col-md-12">
                     <asp:TextBox ID="TextBox5" TextMode="Date" CssClass="form-control" runat="server"></asp:TextBox>
                 </div>
@@ -46,7 +66,9 @@
                 </div>
 
                 <div class="form-group">
-                    <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" OnClick="Button1_Click" Text="Appointment" />
+                     <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" OnClick="Button1_Click" Text="Appointment" data-toggle="modal" data-target="#exampleModal" />
+
+                    
                 </div>
             </div>
         </div>

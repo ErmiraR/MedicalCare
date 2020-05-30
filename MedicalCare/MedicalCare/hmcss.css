@@ -260,3 +260,20 @@ a.item1:hover{
 	width: 100px;
 	height: 100px;
 }
+/*Termin-background-img*/
+.background-termin {
+    background-image: url("images/appointment1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+.termin-form {
+    max-width: 600px;
+    background-color: rgba(0,0,0,.5);
+    margin: 0 auto;
+    padding: 50px;
+    color: white;
+}
+/*END Termin-background-img*/

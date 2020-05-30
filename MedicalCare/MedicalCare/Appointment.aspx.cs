@@ -18,11 +18,9 @@ namespace MedicalCare
             
         }
 
-     
-
         protected void Button1_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO[appointment](emri, mbiemri, email, tel, dep, doktor, data, ora) values(@emri, @mbiemri, @email, @tel, @dep, @doktor, @data,@ora)", con.konekcioni());
+            SqlCommand cmd = new SqlCommand("INSERT INTO[pacient](emri, mbiemri, email, tel, dep, doktor, data, ora) values(@emri, @mbiemri, @email, @tel, @dep, @doktor, @data,@ora)", con.konekcioni());
 
             cmd.Parameters.AddWithValue("@emri", TextBox1.Text);
             cmd.Parameters.AddWithValue("@mbiemri", TextBox2.Text);
@@ -34,11 +32,13 @@ namespace MedicalCare
             cmd.Parameters.AddWithValue("@ora", TextBox6.Text);
 
             cmd.ExecuteNonQuery();
+
+           ScriptManager.RegisterStartupScript(Page, Page.GetType(), "exampleModal", "$('#exampleModal').modal();", true);
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO[appointment](emri, mbiemri, email, tel, dep, doktor, data, ora) values(@emri, @mbiemri, @email, @tel, @dep, @doktor, @data,@ora)", con.konekcioni());
+            SqlCommand cmd = new SqlCommand("INSERT INTO[pacient](emri, mbiemri, email, tel, dep, doktor, data, ora) values(@emri, @mbiemri, @email, @tel, @dep, @doktor, @data,@ora)", con.konekcioni());
 
             cmd.Parameters.AddWithValue("@emri", TextBox1.Text);
             cmd.Parameters.AddWithValue("@mbiemri", TextBox2.Text);
